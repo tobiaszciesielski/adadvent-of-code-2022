@@ -12,35 +12,66 @@ fn main() {
         let enemy = round.next().expect("String");
         let me = round.next().expect("String");
 
-        if me == "X" {
-            points += 1;
+        // if me == "X" {
+        //     points += 1;
 
+        //     if enemy == "A" {
+        //         points += 3
+        //     } else if enemy == "B" {
+        //         // lose
+        //     } else if enemy == "C" {
+        //         points += 6
+        //     }
+        // } else if me == "Y" {
+        //     points += 2;
+
+        //     if enemy == "A" {
+        //         // lose
+        //     } else if enemy == "B" {
+        //         points += 3
+        //     } else if enemy == "C" {
+        //         points += 6
+        //     }
+        // } else if me == "Z" {
+        //     points += 3;
+
+        //     if enemy == "A" {
+        //         // lose
+        //     } else if enemy == "B" {
+        //         points += 6
+        //     } else if enemy == "C" {
+        //         points += 3
+        //     }
+        // }
+
+        // part 2
+        if me == "X" {
             if enemy == "A" {
-                points += 3
+                points += 3;
             } else if enemy == "B" {
-                // lose
+                points += 1;
             } else if enemy == "C" {
-                points += 6
+                points += 2;
             }
         } else if me == "Y" {
-            points += 2;
-
-            if enemy == "A" {
-                points += 6
-            } else if enemy == "B" {
-                points += 3
-            } else if enemy == "C" {
-                // lose
-            }
-        } else if me == "Z" {
             points += 3;
 
             if enemy == "A" {
-                // lose
+                points += 1;
             } else if enemy == "B" {
-                points += 6
+                points += 2;
             } else if enemy == "C" {
+                points += 3;
+            }
+        } else if me == "Z" {
+            points += 6;
+
+            if enemy == "A" {
+                points += 2
+            } else if enemy == "B" {
                 points += 3
+            } else if enemy == "C" {
+                points += 1
             }
         }
     }
