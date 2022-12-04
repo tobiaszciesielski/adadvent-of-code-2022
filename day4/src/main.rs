@@ -1,3 +1,4 @@
+use std::cmp;
 use std::fs::read_to_string;
 
 fn main() {
@@ -18,7 +19,11 @@ fn main() {
         let from2: u32 = from2.parse().expect("Failed to parse string to number");
         let to2: u32 = to2.parse().expect("Failed to parse string to number");
 
-        if (from1 >= from2 && to1 <= to2) || (to1 >= to2 && from1 <= from2) {
+        // Part 1
+        // if (from1 >= from2 && to1 <= to2) || (to1 >= to2 && from1 <= from2) {
+
+        // Part 2
+        if to1 >= from2 && to2 >= from1 {
             sum += 1;
         }
     }
